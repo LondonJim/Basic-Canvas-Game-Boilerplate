@@ -25,6 +25,7 @@ class Game {
       this.fillCanvas()
       this.drawSprite()
       // maybe put in a collision check function here with another object etc
+      // draw the other objects etc
       this.runGame()
     }.bind(this), this.speed)
   }
