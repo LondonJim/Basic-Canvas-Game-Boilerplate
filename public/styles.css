@@ -1,0 +1,16 @@
+#wrapper
+{
+    position: relative;
+}
+
+#backgroundCanvas
+{
+    position: absolute;
+    z-index: 1;
+}
+
+#gameCanvas
+{
+    position: absolute;
+    z-index: 0;
+}
