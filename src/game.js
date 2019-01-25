@@ -44,12 +44,12 @@ class Game {
     this.ctxGame.drawImage(this.sprites, sheetX, sheetY, 24, 24, this.playerX, this.playerY, 24, 24)
   }
 
-  // example check key pressed
+  // run once to set event listener, now every time a key is pressed the function is run
   keyCheck() {
     document.addEventListener("keydown", this.direction.bind(this))
   }
 
-  // what happens when a certain key is pressed
+  // code what happens when a certain key is pressed
   direction(event) {
     const LEFT_KEY = 37
     const RIGHT_KEY = 39
