@@ -14,6 +14,9 @@ class Game {
     this.playerX = 0 // starting position x
     this.playerY = 0 // starting position y
 
+    this.enemyX = 24 // starting position x
+    this.enemyY = 24 // starting position y
+
     this.keyCheck()
     this.runGame()
   }
@@ -24,6 +27,8 @@ class Game {
       if (this.isEndGame()) return // currently game stops if true
       this.fillCanvas()
       this.drawSprite()
+      this.drawEnemy()
+      this.actions()
       // maybe put in a collision check function here with another object etc
       this.runGame()
     }.bind(this), this.speed)
@@ -44,6 +49,16 @@ class Game {
     this.ctxGame.drawImage(this.sprites, sheetX, sheetY, 24, 24, this.playerX, this.playerY, 24, 24)
   }
 
+  // draw 'enemy' sprites
+  drawEnemy() {
+    let sheetX = 24 // x on the image sprite sheet, get image at this x coordinate (see below 24x24 sprites example)
+    let sheetY = 0 // y on the image sprite sheet, get image at this y coordinate (see below 24x24 sprites example)
+    this.ctxGame.drawImage(this.sprites, sheetX, sheetY, 24, 24, this.enemyX, this.enemyY, 24, 24)
+  }
+
+  actions() {
+    // any actions that happen during the game on each tick
+  }
   // example check key pressed
   keyCheck() {
     document.addEventListener("keydown", this.direction.bind(this))
