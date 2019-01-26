@@ -30,6 +30,7 @@ class Game {
       this.drawEnemy()
       this.actions()
       // maybe put in a collision check function here with another object etc
+      // draw the other objects etc
       this.runGame()
     }.bind(this), this.speed)
   }
@@ -49,6 +50,7 @@ class Game {
     this.ctxGame.drawImage(this.sprites, sheetX, sheetY, 24, 24, this.playerX, this.playerY, 24, 24)
   }
 
+<<<<<<< HEAD
   // draw 'enemy' sprites
   drawEnemy() {
     let sheetX = 24 // x on the image sprite sheet, get image at this x coordinate (see below 24x24 sprites example)
@@ -60,11 +62,14 @@ class Game {
     // any actions that happen during the game on each tick
   }
   // example check key pressed
+=======
+  // run once to set event listener, now every time a key is pressed the function is run
+>>>>>>> ba3334a2d868d6cad6809fa10bd58c37d7916248
   keyCheck() {
     document.addEventListener("keydown", this.direction.bind(this))
   }
 
-  // what happens when a certain key is pressed
+  // code what happens when a certain key is pressed
   direction(event) {
     const LEFT_KEY = 37
     const RIGHT_KEY = 39
