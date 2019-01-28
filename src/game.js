@@ -5,7 +5,7 @@ class Game {
     this.ctxGame = this.gameCanvas.getContext("2d")
 
     this.backgroundCanvas = document.getElementById("backgroundCanvas")
-    this.ctxBackground = this.gameCanvas.getContext("2d")
+    this.ctxBackground = this.backgroundCanvas.getContext("2d")
 
     this.sprites = new Image()
     this.sprites.src = "./img/exampleSprites.png" // currenty four sprites in png file
