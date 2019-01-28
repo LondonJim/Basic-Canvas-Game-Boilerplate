@@ -17,8 +17,10 @@ class Game {
     this.enemyX = 24 // starting position x
     this.enemyY = 24 // starting position y
 
-    this.keyCheck()
-    this.runGame()
+    this.sprites.onload = function() {
+      this.keyCheck()
+      this.runGame()
+    }.bind(this)
   }
 
   // loop to run game, lower this.speed to make 'ticks' faster
